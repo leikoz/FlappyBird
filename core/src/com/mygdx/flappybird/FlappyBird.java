@@ -6,6 +6,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 public class FlappyBird extends ApplicationAdapter {
+
+	public static final int WIDHT = 480;
+	public static final int HEIGHT = 720;
+	public static final String TITLE = "FlappyBird";
+
 	SpriteBatch batch;
 	Texture img;
 	
