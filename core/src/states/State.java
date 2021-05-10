@@ -1,4 +1,4 @@
-package States;
+package states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -8,10 +8,10 @@ public abstract class State {
 
     protected OrthographicCamera camera;
     protected Vector3 mouse;
-    protected GameStateManager gsn;
+    protected GameStateManager gsm;
 
     protected State(GameStateManager gameStateManager){
-        this.gsn = gameStateManager;
+        this.gsm = gameStateManager;
         camera = new OrthographicCamera();
         mouse = new Vector3();
     }
@@ -19,5 +19,6 @@ public abstract class State {
     protected abstract void handleInput();
     public abstract void update(float dt);
     public abstract void render(SpriteBatch spriteBatch);
+    public abstract void dispose();
 
 }
